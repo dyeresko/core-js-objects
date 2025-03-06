@@ -385,34 +385,48 @@ function group(array, keySelector, valueSelector) {
  *
  *  For more examples see unit tests.
  */
-
+const BaseCSSClassSelector = require('./classes');
 const cssSelectorBuilder = {
-  element(/* value */) {
-    throw new Error('Not implemented');
+  element(value) {
+    const selectorObj = new BaseCSSClassSelector([], '');
+    selectorObj.element(value);
+    return selectorObj;
   },
 
-  id(/* value */) {
-    throw new Error('Not implemented');
+  id(value) {
+    const selectorObj = new BaseCSSClassSelector([], '');
+    selectorObj.id(value);
+    return selectorObj;
   },
 
-  class(/* value */) {
-    throw new Error('Not implemented');
+  class(value) {
+    const selectorObj = new BaseCSSClassSelector([], '');
+    selectorObj.class(value);
+    return selectorObj;
   },
 
-  attr(/* value */) {
-    throw new Error('Not implemented');
+  attr(value) {
+    const selectorObj = new BaseCSSClassSelector([], '');
+    selectorObj.attr(value);
+    return selectorObj;
   },
 
-  pseudoClass(/* value */) {
-    throw new Error('Not implemented');
+  pseudoClass(value) {
+    const selectorObj = new BaseCSSClassSelector([], '');
+    selectorObj.pseudoClass(value);
+    return selectorObj;
   },
 
-  pseudoElement(/* value */) {
-    throw new Error('Not implemented');
+  pseudoElement(value) {
+    const selectorObj = new BaseCSSClassSelector([], '');
+    selectorObj.pseudoElement(value);
+    return selectorObj;
   },
 
-  combine(/* selector1, combinator, selector2 */) {
-    throw new Error('Not implemented');
+  combine(selector1, combinator, selector2) {
+    const selectorObj = new BaseCSSClassSelector([], '');
+    selectorObj.combine(selector1, combinator, selector2);
+    return selectorObj;
   },
 };
 
