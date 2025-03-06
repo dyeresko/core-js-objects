@@ -386,6 +386,7 @@ function group(array, keySelector, valueSelector) {
  *  For more examples see unit tests.
  */
 const BaseCSSClassSelector = require('./classes');
+
 const cssSelectorBuilder = {
   element(value) {
     const selectorObj = new BaseCSSClassSelector([], '');
